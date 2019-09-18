@@ -31,13 +31,13 @@ Das Programm benötigt mind. Java 8 und das Tool ant zum Bauen.
 Über den Ordner nbproject/ kann das Projekt direkt in das Tool
 Netbeans importiert werden.
 
-# Bauen
+### Bauen
 
 Im Projektordner befindet sich eine Datei build.xml. Ruft man in diesem
 Ordner ant ohne Parameter auf, wird das komplette Projekt inklusive Javadocs
 erstellt.
 
-# Start des Programms
+### Start des Programms
 
 Nach dem Bauen befindet sich im Projektordner ein dist/-Ordner. 
 cd dist/
@@ -57,7 +57,7 @@ Implementierungsklassen der Schnittstellen.
 
 ## Algorithmus
 
-# 1. Einlesen
+### 1. Einlesen
 
 Ich erwarte einen Eingabestring der Form "([min,max] )*". Dieser wird bis zu 
 einer gewissen Länge gegen einen regulären Ausdruck validiert. Ab ca. 100k 
@@ -67,16 +67,16 @@ Länge nicht mehr validiert.
 Der Eingabe String wird geparst, in Intervall-Objekte überführt, und gestreamt in
 eine sortierte TreeSet eingepflegt.
 
-# 2. Die Merge-Funktion
+### 2. Die Merge-Funktion
 
-Durch die Sortierung nach den min-Werten der Intervalle, müssen nur noch benachbarte
+Durch die Sortierung nach den min-Werten der Intervalle müssen nur noch benachbarte
 Elemente auf eine gemeinsame Schnittmenge überprüft, und ggf. gemergt werden. 
 Dies erfolgt in einem Map/Reduce-Konstrukt.
 
 
-# 3. Die Ausgabe
+### 3. Die Ausgabe
 
-Die Ausgabe hat die gleiche Struktur wie die Eingabe, und besteht aus den
+Die Ausgabe hat die gleiche Struktur wie die Eingabe und besteht aus den
 gemergten Elementen in einem String.
 
 
@@ -92,7 +92,7 @@ Die Laufzeit konnte ich in einem Lasttest bestätigen.
 
 Zwischen 10 und 100 Millionen Eingabeintervallen bekomme ich auf einem Mac Pro
 eine OutOfMemoryException beim Einlesen. Die TreeSet benötigt knapp 30%, die Instanzen der 
-Intervalobjekte benötigen ungefähr 10% des Heap. Ausser String/StringBuilder fallen
+Intervallobjekte benötigen ungefähr 10% des Heap. Ausser String/StringBuilder fallen
 alle anderen Strukturen nicht ins Gewicht.
 
 ## Optimierungsideen für sehr große Eingabemengen
@@ -104,7 +104,7 @@ auf int[]-Arrays operieren, was den Speicherbedarf stark reduzieren würde.
 
 ## Bearbeitungszeit
 
-Einen erste lauffähige Version hatte ich in knapp 20 Minuten. Die Bearbeitungszeit
+Eine erste lauffähige Version hatte ich in knapp 20 Minuten. Die Bearbeitungszeit
 der gesamten Aufgabe mit Tests und Dokumentation hat zirka 6 Stunden gedauert.
 
 ## Fazit
