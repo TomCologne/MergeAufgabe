@@ -12,7 +12,7 @@ Java entschieden.
 
 - Syntaktisch falsche Eingaben münden in einer Exception. 
 - Die leere Eingabe ist erlaubt. 
-- Die Intervallgrenzen sind im Intervall enthalten, also mathematisch etwa ]a,b[.
+- Die Intervallgrenzen sind im Intervall enthalten, also mathematisch [a,b], im Gegensatz zu ]a,b[.
 - Ungültige Intervalle mit [a,b]: b < a werden nicht gemergt und an den Anfang
   der Ergebnismenge sortiert.
 
