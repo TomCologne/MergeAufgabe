@@ -184,7 +184,7 @@ public class MergeAPIImpl implements MergeAPI {
      */
     private String toString(Collection c) {
         StringBuilder sb = new StringBuilder();
-        c.forEach(interval -> sb.append(interval.toString()).append(" "));
+        c.forEach(interval -> sb.append(interval.toString()).append(SEPARATOR));
         return sb.toString().trim();
     }
 }

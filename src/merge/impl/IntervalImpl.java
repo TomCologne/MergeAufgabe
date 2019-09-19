@@ -49,7 +49,7 @@ public final class IntervalImpl implements Interval {
      * @return true, wenn g&uuml;ltig.
      */
     public boolean isValid() {
-        return max - min > 0;
+        return max - min >= 0;
     }
 
     /**
