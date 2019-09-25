@@ -4,7 +4,7 @@ import merge.impl.MergeAPIImpl;
 
 /**
  *
- * Comand line Interface fuer das Merge-Programm.
+ * Command line Interface fuer das Merge-Programm.
  * 
  * @author mgxa2d
  */
